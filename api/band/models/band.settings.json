@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bands",
+  "info": {
+    "name": "Band"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "biography": {
+      "type": "text"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "baner": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "social_medias": {
+      "via": "band",
+      "collection": "social-media"
+    },
+    "contacts": {
+      "via": "band",
+      "collection": "contacts"
+    }
+  }
+}

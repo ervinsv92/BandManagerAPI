@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "social_medias",
+  "info": {
+    "name": "SocialMedia"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "band": {
+      "model": "band",
+      "via": "social_medias"
+    }
+  }
+}

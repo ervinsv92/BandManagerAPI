@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tracks",
+  "info": {
+    "name": "Track"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "number": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "album": {
+      "model": "album",
+      "via": "tracks"
+    }
+  }
+}
